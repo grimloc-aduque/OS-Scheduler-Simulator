@@ -36,7 +36,34 @@ Run the executable with the -i flag
 ```
 ./out/<scheduling_algorithm>_scheduling_simulator -i
 ```
-<img src="./Images/interactive_mode.png" style="width:800px;"/>
+
+<font size="1">
+
+Example execution:
+
+```
+--------------------
+TOTAL CPU CYCLES: 2
+TOTAL CPU TIME: 1.000 [s]
+PROCESSES INFO
+[-] FINISHED: 
+[+] EXECUTING: 
+[Process] ID:1 - Priority:67 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:65 - IO_ratio:0.12 - State:EXECUTING - CPU_Cycles:1
+[*] READY: 
+[Process] ID:2 - Priority:56 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:65 - IO_ratio:0.70 - State:READY - CPU_Cycles:0
+[Process] ID:3 - Priority:43 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:20 - IO_ratio:0.06 - State:READY - CPU_Cycles:0
+[Process] ID:4 - Priority:108 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:72 - IO_ratio:0.77 - State:READY - CPU_Cycles:0
+[Process] ID:5 - Priority:23 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:67 - IO_ratio:0.06 - State:READY - CPU_Cycles:0
+[!] BLOQUED: 
+[Process] ID:0 - Priority:17 - CPU_Start_Cycle:0 - CPU_End_Cycle:-1 - CPU_Total_Cycles:65 - IO_ratio:0.61 - State:BLOQUED - CPU_Cycles:1
+[?] INCOMING: 
+--------------------
+
+...
+
+```
+</font>
+
 
 
 ## Benchmark Mode
@@ -47,9 +74,27 @@ Run the executable with the -b flag
 ```
 The benchmark mode compares the turn around time and throughput of the simulator at different ratios of CPU/IO bound processes.
 
-<img src="./Images/benchmark_mode.png" style="width:700px;"/>
+<font size="1">
+
+Example execution:
+
+```
+--------------------> IO/CPU: 0.10/0.90
+
+* Repetition 1
+
+--------------------
+TOTAL_PROCESSES: 100
+TOTAL_CPU_CYCLES: 5674
+TOTAL_CPU_TIME: 1.702 [s]
+THROUGHPUT: 211491 [P/h]
+TURNAROUND_TIME: 1.156 [s]
+--------------------
 
 ...
+```
+</font>
+
 
 ## User Mode
 
